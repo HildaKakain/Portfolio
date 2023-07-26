@@ -1,0 +1,445 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Hotel Site</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">\
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+
+
+    <body>
+     <header class="header" id="navigation-menu">
+      <div class="container">
+        <nav>
+            <a href="#" class="logo">H.D.K</a>
+            <ul class="nav-menu">
+             <li><a href="#home" class="nav-link">Home</a></li>
+             <li><a href="#about" class="nav-link">About</a></li>
+             <li><a href="#rooms" class="nav-link">Rooms</a></li>
+             <li><a href="#resturant" class="nav-link">Resturant</a></li>
+             <li><a href="#gallery" class="nav-link">Gallery</a></li>
+             <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="hambuger">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+            </div>
+        </nav>
+      </div>
+     </header>
+
+     <script>
+        const hambuger = document.querySelector('.hambuger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hambuger.addEventListener("click", mobileMenu);
+
+        function mobileMenu(){
+            hambuger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll('.nav-link');
+        navLink.forEach((n) => n.addEventListener("click", closeMenu));
+        
+        function closeMenu(){
+            hambuger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+     </script>
+
+    <section class="home" id="home">
+     <div class="head_container">
+      <div class="box">
+       <div class="text">
+       <h1>BRIKA RESORT</h1>
+       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum non nemo alias culpa deserunt vel aliquid tempora voluptates praesentium obcaecati. Perspiciatis libero excepturi fugit eius. Hic eaque consequatur quae odit.</p>
+       <button>MORE INFO</button>
+       </div>
+      </div>
+      <div class="image">
+      <img src="images/home1.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="images/home1.jpg" alt="" class="slide active" onclick="img('images/home1.jpg')">
+        <img src="images/room1.jpg" alt="" class="slide" onclick="img('images/room1.jpg')">
+        <img src="images/room2.jpg" alt="" class="slide" onclick="img('images/room2.jpg')">
+        <img src="images/room3.jpg" alt="" class="slide" onclick="img('images/room3.jpg')">
+      </div>
+     </div>
+    </section>
+    
+    <script>
+     function img(anything) {
+        document.querySelector('.slide').src = anything;
+     }
+     function change(change) {
+        const line = document.querySelector('.image');
+        line.style.background = change;
+     }
+    </script>
+
+    <section class="book">
+        <div class="container flex">
+            <div class="input grid">
+                <div class="box">
+                 <label>Check-in:</label><br>
+                 <input type="date" placeholder="Check-in-Date">
+                </div>
+                <div class="box">
+                    <label>Check-out:</label><br>
+                    <input type="date" placeholder="Check-out-Date">
+                </div>
+                <div class="box">
+                    <label>Adults:</label> <br>
+                    <input type="number" placeholder="0" >
+                </div>
+                <div class="box">
+                    <label>Children:</label> <br>
+                    <input type="number" placeholder="0">
+                </div>
+            </div>
+            <div class="search">
+            <input type="submit" value="SEARCH">
+            </div>
+        </div>
+    </section>
+    
+    <section class="about top" id="about">
+     <div class="container flex">
+      <div class="left">
+       <div class="img">
+        <img src="images/sight1.jpg" alt="" class="image1">
+        <img src="images/sight2.jpg" alt="" class="image2">
+       </div>
+       </div>
+       <div class="right">
+       <div class="heading">
+        <h5>YOUR COMFORT OUR PRIORITY</h5>
+        <h2>Welcome to Brika Hotel Resort</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate reprehenderit unde hic excepturi veniam? Corporis fugiat provident itaque maxime voluptates error blanditiis rerum libero nemo! Minima temporibus dolor neque assumenda.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, illo impedit minus voluptas, optio nulla ipsam modi id explicabo cupiditate sequi saepe voluptate alias dolore quibusdam. Porro reiciendis quod eligendi.</p>
+        <button class="btn1">READ MORE</button>
+       </div> 
+      </div>
+     </div>
+    </section>
+
+    <section class="wrapper top">
+    <div class="container">
+   <div class="text">
+    <h2>Our Amenities</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ex cum, nemo vero placeat commodi! Dolorem numquam vero voluptatibus, nam repellendus rem provident amet ut sequi animi unde quibusdam ullam.</p>
+    <div class="content">
+         <div class="box flex">
+         <i class="fas fa-swimming-pool"></i>
+         <span>Swimming pool</span>
+         </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>gym & yoga</span>
+           </div>
+           <div class="box flex">
+           <i class="fas fa-spa"></i>
+            <span>Spa & massage</span>
+           </div>
+           <div class="box flex">
+            <i class="fas fa-ship"></i>
+             <span>Boat Tours</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+             <span>Surfing Lessons</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+             <span>Conference rooms</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-water"></i>
+             <span>Diving</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+             <span>Private Beach</span>
+          </div>
+
+    </div>
+   </div>
+    </div>
+    </section>
+ 
+    <section class="room top" id="rooms">
+    <div class="container">
+     <div class="heading_top flex1">
+     <div class="heading">
+     <h5>HOME AWAY FROM HOME</h5>
+     <h2>Rooms $ Suites</h2>
+     </div>
+     </div>
+
+
+    <div class="content grid">
+    <div class="box">
+    <div class="img">
+    <img src="images/room5.jpg">
+    </div>
+    <div class="text"> 
+    <h3>Deluxe Rooms</h3>
+    <p><span>$</span>129 <span>/per night</span></p>
+    </div>
+    </div>
+    <div class="box">
+   <div class="img">
+   <img src="images/suites2.jpg">
+   </div>
+    <div class="text"> 
+    <h3>Deluxe Rooms</h3>
+    <p><span>$</span>129 <span>/per night</span></p>
+    </div>
+    </div>
+    <div class="box">
+    <div class="img">
+    <img src="images/room2.jpg">
+    </div>
+    <div class="text"> 
+    <h3>Deluxe Rooms</h3>
+    <p><span>$</span>129 <span>/per night</span></p>
+    </div>
+    </div>
+    <div class="box">
+        <div class="img">
+        <img src="images/suites3.jpg">
+        </div>
+        <div class="text"> 
+        <h3>Deluxe Rooms</h3>
+        <p><span>$</span>129 <span>/per night</span></p>
+        </div>
+    </div>
+    </div>
+    <div class="button">
+        <button class="btn1">VIEW ALL</button>
+        </div>
+    </section>
+
+    <section class="wrapper wrapper2 top">
+    <div class="container">
+    <div class="text">
+    <div class="heading">
+    <h5>AT THE HEART OF COMMUNICATION</h5>
+    <h2>People say</h2>
+    </div>
+    <div class="para">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sed enim, sapiente eum esse nemo quis maxime molestiae? Quisquam expedita impedit laboriosam deserunt repellendus enim laborum totam nemo sit ex.</p>
+
+        <div class="box flex">
+         <div class="img">
+        <img src="./images/tent1.jpg">
+         </div>
+         <div class="name">
+          <h5>Godwill Kakain</h5>
+          <h5>Hotelier</h5>
+         </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <section class="resturant top" id="resturant">
+       <div class="container flex">
+        <div class="left">
+        <img src="./images/resturant1.jpg">
+        </div>
+        <div class="right">
+        <div class="text">
+        <h2>Our Resturant</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem veritatis nulla impedit consequuntur illo, numquam sequi aliquam distinctio, nemo, facilis commodi. Suscipit consectetur iure adipisci nesciunt possimus, mollitia fugit ab?</p>
+        </div>
+        <div class="accordionWrapper">
+        <div class="accordionItem open">
+         <h2 class="accordionIHeading">Italian Kitchen</h2>
+         <div class="accordionItemContent">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsa voluptates quidem corrupti in non nisi laudantium voluptatibus, culpa placeat quas laboriosam nostrum sit? Saepe cumque suscipit maxime aperiam repellendus.</p>
+         </div>
+        </div>
+        <div class="accordionItem close">
+            <h2 class="accordionIHeading">Mexican Kitchen</h2>
+            <div class="accordionItemContent">
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsa voluptates quidem corrupti in non nisi laudantium voluptatibus, culpa placeat quas laboriosam nostrum sit? Saepe cumque suscipit maxime aperiam repellendus.</p>
+            </div>
+        </div>
+        <div class="accordionItem close">
+            <h2 class="accordionIHeading">Italian Kitchen</h2>
+            <div class="accordionItemContent">
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsa voluptates quidem corrupti in non nisi laudantium voluptatibus, culpa placeat quas laboriosam nostrum sit? Saepe cumque suscipit maxime aperiam repellendus.</p>
+            </div>
+       </div>
+       <div class="accordionItem close">
+               <h2 class="accordionIHeading">Mexican Kitchen</h2>
+               <div class="accordionItemContent">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsa voluptates quidem corrupti in non nisi laudantium voluptatibus, culpa placeat quas laboriosam nostrum sit? Saepe cumque suscipit maxime aperiam repellendus.</p>
+               </div>
+      </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+        var accItem = document.getElementsByClassName('accordionItem');
+        var accHD = document.getElementsByClassName('accordionIHeading');
+
+        for (i = 0; i < accHD.length; i++){
+            accHD[i].addEventListener('click', toggleItem, false)
+        }
+
+        function toggleItem(){
+            var itemClass = this.parentNode.className;
+            for (var i = 0; i < accItem.length; i++){
+            accItem[i].className = 'accordionItem close';
+        }
+        if (itemClass == 'accordionItem close') {
+            this.parentNode.className = 'accordionItem open';
+        }
+        }
+    </script>
+
+    <section class="gallery mtop" id="gallery">
+     <div class="container">
+     <div class="heading_top flex1">
+     <div class="heading">
+     <h5>GALLERY</h5>
+     <h2>Photo Gallery</h2>
+     </div>
+     <div class="button">
+     <button class="btn1">VIEW GALLERY</button>
+     </div>
+     </div>
+     
+     <div class="owl-carousel owl-theme">
+     <div class="item">   
+      <img src="./images/room5.jpg" alt="">
+    </div>
+    <div class="item">   
+        <img src="./images/suites4.jpg" alt="">
+      </div>
+      <div class="item">   
+        <img src="./images/suites3.jpg" alt="">
+      </div>
+      <div class="item">   
+        <img src="./images/room2.jpg" alt="">
+      </div>
+      <div class="item">   
+        <img src="./images/suites1.jpg" alt="">
+      </div>
+      <div class="item">   
+        <img src="./images/room3.jpg" alt="">
+      </div>
+      <div class="item">   
+        <img src="./images/room1.jpg" alt="">
+      </div>
+      <div class="item">   
+        <img src="./images/suites2.jpg" alt="">
+      </div>
+      <div class="item">   
+        <img src="./images/sight3.jpg" alt="">
+      </div>
+      <div class="item">   
+        <img src="./images/sight2.jpg" alt="">
+      </div>
+      <div class="item">   
+        <img src="./images/tent2.jpg" alt="">
+      </div>
+     </div>
+
+
+     </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js">
+    </script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin: 10,
+            nav: true,
+            dots:false,
+            navText: ["<i class='fas fa-chevron-left'></li>", "<i class='fas fa-chevron-right'></li>"],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        })
+    </script>
+
+    <section class="map top">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.555546327423!2d6.245519014446509!3d4.306118446152277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106bd31d398584af%3A0x7ab1e531d08e182d!2sBrass%20Island!5e0!3m2!1sen!2sng!4v1675320241912!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer>
+        <div class="container grid top">
+        <div class="box">
+          <img src="./images/icons8-5-star-hotel-50.png" alt="">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quae commodi optio omnis minus accusantium magni, blanditiis nisi, laboriosam temporibus doloribus modi ipsa nihil in nemo. In delectus nesciunt magnam?</p>
+
+          <p>Accepted payment method</p>
+          <div class="payment grid">
+            <img src="./images/icons8-visa-48.png" alt="">
+            <img src="./images/icons8-mastercard-48.png" alt="">
+            <img src="./images/icons8-paypal-48.png" alt="">
+            <img src="./images/icons8-bitcoin-48.png" alt="">
+          </div>
+        </div>
+
+        <div class="box">
+        <h3>Recent News</h3>
+        <ul>
+          <li>Our island boat Tour</li>
+          <li>Chill and escape to our natural shelter</li>
+          <li>December in Brika Hotel</li>
+          <li>Masqurade Dancing at Brika</li>
+        </ul>
+        </div>
+
+        <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li>About Brika</li>
+          <li>Customer Care/Help</li>
+          <li>Corporate Accounts</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+        </div>
+
+        <div class="box" id="contact">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Cameroon Ama, Brass LGA, Bayelsa</li>
+          <li><i class="fas fa-phone"></i>(+234)-80-xxxx-xx-xx</li>
+          <li><i class="fas fa-envelope"></i>examples1224@yahoo.com</li>
+          <li><i class="fas fa-comments"></i>24/7 Customer Services</li>
+        </ul>
+        </div>
+        </div>
+        
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello There !</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+
+    <body>
+    <section class="hero-header">
+       <div class="wrapper">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-h"></i>
+                <div class="logo-text">Hilda Kakain</div>
+            </div>
+            <nav>
+                <div class="togglebtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="navlinks">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#Resume">Resume</a></li>
+                    <li><a href="#Contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="hero-pic">
+                <img src="./images/initials.jpg" alt="profile pic">
+            </div>
+            <div class="hero-text">
+                <h5>Hi there, <span class="">Frontend Developer</span></h5>
+                <h1>Hilda Kakain</h1>
+                <p>I'm an enthusiastic learner and skilled Frontend Developer with a passion for creating user-centric websites.
+                   Experienced in React, APIs and MongoDB, I thrive on delivering innovative solutions that drive results. Adaptable and eager to learn,
+                   I'm dedicated to crafting seamless digital experiences that leaves a lasting impact. Let's collaborate and make something extraordinary.
+                </p>
+                <div class="btn-group">
+                    <a href="./images/HildaKakainResume.pdf" download class="btn active">Download CV <i class="fa-solid fa-download"></i></a>
+                </div>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        
+       </div>
+      </section>
+    
+
+
+   <section class="Portfolio" id="Portfolio">
+            <div class="main-text">
+                <h2>My Portfolio</h2>
+            </div>
+
+            <div class="Portfolio-content">
+               <div class="row">
+                 <a href="./Profile Card/index.html"><img src="./images/image.png" alt=""></a>
+                  <div class="main-row">
+                    <div class="row-text">
+                      <h6>PROFILE CARD USING HTML VANILLA CSS</h6>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                <a href="./Hotel/index.html"><img src="./images/croped.png" alt=""></a>
+                <div class="main-row">
+                  <div class="row-text">
+                    <h6>HOTEL WEBSITE WITH HTML CSS & JAVASCRIPT</h6>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                </div>
+             </div>
+
+             <div class="row">
+                <a href="./product/product.html"><img src="./images/cropped.png" alt=""></a>
+                <div class="main-row">
+                  <div class="row-text">
+                    <h6>PRODUCT PAGE WITH HTML BOOTSTRAP/CSS</h6>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                </div>
+             </div>
+
+             <div class="row img">
+                <a href="./Chrome Extension/popup.html"><img src="./images/cropped4.png" alt=""></a>
+                <div class="main-row">
+                  <div class="row-text">
+                    <h6>CURRENCY EXCHANGE CALC WITH CELEBRITY API (EXTENSION)</h6>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                </div>
+             </div>
+
+             <div class="row" >
+                <a href="./Text-To-Voice Converter/index.html"><img src="./images/converter.png" alt=""></a>
+                <div class="main-row">
+                  <div class="row-text">
+                    <h6>TEXT-TO-SPEECH CONVERTER USING HTML CSS JAVASCRIPT</h6>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                </div>
+             </div>
+
+             <div class="row">
+                <a href="./Payment Portal/index.html"><img src="./images/cropped7.png" alt=""></a>
+                <div class="main-row">
+                  <div class="row-text">
+                    <h6>PAYMENT GATEWAY USING HTML CSS JAVASCRIPT</h6>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                </div>
+             </div>
+             
+            </div>
+   </section>
+
+
+   <section class="Contact" id="Contact">
+          <div class="contact-text">
+            <h2>Contact Me</h2>
+            <h4>Let Me Bring Your Designs To Life</h4>
+            <div class="contact-list">
+              <li><a href="#">Kakaindomoye@yahoo.com</a></li>
+              <li><a href="#">+(234)-811-384-7191</a></li>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form action="">
+            <input type="" placeholder="Enter Your Name" required>
+            <input type="email" placeholder="Enter Your Email" required>
+            <input type="" placeholder="Enter Your Subject" required>
+            <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+            <input type="submit" value="submit" class="send">
+            </form>
+          </div>
+  </section>
+   
+
+    <script>
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+        var links = document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+    </script>
+    </body>
+</html>
