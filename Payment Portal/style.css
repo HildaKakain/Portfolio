@@ -1,0 +1,347 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    color: #444;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    width: 67%;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.left{
+    width: 25%;
+    font-weight: bold;
+}
+
+.left p{
+    padding: 30px 20px;
+    font-weight: bold;
+}
+
+.methods{
+    padding: 10px 0;
+}
+
+.methods div{
+    padding: 7px 20px;
+    cursor: pointer;
+    font-size: 10px;
+    margin-left: 15px;
+}
+
+.methods div:hover{
+    box-shadow: 0 0 10px rgba(172, 255, 47, 0.196);
+}
+
+.methods div::after{
+    content: '';
+    display: inline-block;
+    color: greenyellow;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 4px 0 4px 4px;
+    border-left-color: var(--fondy-success);
+    margin-left: 15px;
+}
+
+.fa-solid{
+    margin-right: 10px;
+    font-size: 22px;
+    color: #aaa;
+}
+
+.center{
+    width: 50%;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.center a{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right{
+    width: 25%;
+}
+
+.right p{
+    padding: 20px 20px;
+    font-weight: bold;
+}
+
+.details{
+    padding: 20px 20px;
+}
+
+.right a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.card-details{
+    padding: 15px 40px;
+}
+
+.card-details .c-number{
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 0 12px;
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input{
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+.c-details{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.cc-exp{
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    height: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 150px;
+}
+
+.c-details .cvv-box{
+   border: 1px solid #aaa;
+   margin-top: 10px;
+   padding: 8px;
+   height: 50px;
+   border-radius: 3px;
+   display: flex;
+   justify-content: space-between;
+   width: 80px;
+}
+
+.cc-cvv{
+    width: 35px;
+}
+
+.email input{
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 12px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+button{
+    width: 100%;
+    border: none;
+    height: 50px;
+    border-radius: 3px;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #444;
+    background-color: greenyellow;
+}
+
+button:hover{
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+@media(max-width: 930px){
+    
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container{
+        display: flex;
+        width: 85%;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+    }
+    
+    .left{
+        width: 25%;
+        font-weight: bold;
+    }
+    
+    .left p{
+        padding: 20px 15px;
+    }
+    
+    .methods{
+        padding: 4px 0;
+    }
+    
+    .methods div{
+        padding: 20px 10px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+    
+    .methods div:hover{
+        box-shadow: 0 0 10px rgba(172, 255, 47, 0.196);
+    }
+    
+    .methods div::after{
+        content: '';
+        display: inline-block;
+        color: greenyellow;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 4px 0 4px 4px;
+        border-left-color: var(--fondy-success);
+        margin-left: 10px;
+    }
+    
+    .fa-solid{
+        margin-right: 10px;
+        font-size: 10px;
+        color: #aaa;
+    }
+    
+    .center{
+        width: 50%;
+        border-right: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+    }
+    
+    .center a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    .right{
+        width: 35%;
+    }
+    
+    .right p{
+        padding: 20px 15px;
+        font-weight: bold;
+    }
+    
+    .details{
+        padding: 20px 20px;
+    }
+    
+    .right a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+    }
+    
+    .card-details{
+        padding: 10px 10px;
+    }
+    
+    .card-details .c-number{
+        width: 100%;
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        padding: 0 5px;
+        margin-top: 10px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    
+    .c-details{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+    
+    .cc-exp{
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        height: 25px;
+        margin-top: 10px;
+        padding: 6px;
+        width: 80px;
+    }
+    
+    .c-details .cvv-box{
+       border: 1px solid #aaa;
+       margin-top: 10px;
+       padding: 6px;
+       height: 25px;
+       border-radius: 3px;
+       display: flex;
+       justify-content: space-between;
+       width: 64px;
+    }
+    
+    .cc-cvv{
+        width: 35px;
+    }
+    
+    .email input{
+        width: 100%;
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        padding: 6px;
+        height: 35px;
+        margin-top: 10px;
+    }
+    
+    button{
+        width: 100%;
+        border: none;
+        height: 40px;
+        border-radius: 3px;
+        margin-top: 40px;
+        font-size: 18px;
+        color: #444;
+        background-color: greenyellow;
+    }
+    
+    button:hover{
+        background-color: #444;
+        color: white;
+        cursor: pointer;
+    }
+
+}
+
